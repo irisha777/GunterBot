@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ShitBot\\GunterBot.csproj": {}
+    "C:\\MyProject\\GunterBot\\GunterBot.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ShitBot\\GunterBot.csproj": {
+    "C:\\MyProject\\GunterBot\\GunterBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ShitBot\\GunterBot.csproj",
+        "projectUniqueName": "C:\\MyProject\\GunterBot\\GunterBot.csproj",
         "projectName": "GunterBot",
-        "projectPath": "C:\\Projects\\ShitBot\\GunterBot.csproj",
+        "projectPath": "C:\\MyProject\\GunterBot\\GunterBot.csproj",
         "packagesPath": "C:\\Users\\BlackBox\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ShitBot\\obj\\",
+        "outputPath": "C:\\MyProject\\GunterBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\BlackBox\\AppData\\Roaming\\NuGet\\NuGet.Config",
