@@ -15,7 +15,6 @@ namespace ShitBot.Controllers
         {
             var commands = Bot.Commands;
             var message = update.Message;
-            Console.WriteLine($"{message}");
             var botClient = await Bot.GetBotClientAsync();
 
             foreach (var command in commands)

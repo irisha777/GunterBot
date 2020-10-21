@@ -2,7 +2,7 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace ShitBot.Models.Commands
+namespace GunterBot.Models.Commands
 {
     public abstract class Command
     {

@@ -1,17 +1,21 @@
 ﻿using System.Threading.Tasks;
+using GunterBot.Tools;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
 namespace GunterBot.Models.Commands
 {
-    public class StartCommand : Command
+    public class GetRateCommand : Command
     {
-        public override string Name => @"/start";
+        public override string Name => @"/getrate";
 
         public override async Task Execute(Message message, TelegramBotClient botClient)
         {
             var chatId = message.Chat.Id;
-            await botClient.SendTextMessageAsync(chatId, "Hallo I'm ASP.NET Core Bot", 
+
+            var rate = await RatesReceiver.GetRates();
+
+            await botClient.SendTextMessageAsync(chatId, $"Rate: {rate}",
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
         }
     }

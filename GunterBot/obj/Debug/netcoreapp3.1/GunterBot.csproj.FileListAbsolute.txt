@@ -24,8 +24,6 @@ C:\MyProject\GunterBot\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.csprojAssemblyReference.cache
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.AssemblyInfoInputs.cache
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.AssemblyInfo.cs
-C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.csproj.CoreCompileInputs.cache
-C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.MvcApplicationPartsAssemblyInfo.cache
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.RazorTargetAssemblyInfo.cache
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.csproj.CopyComplete
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\staticwebassets\GunterBot.StaticWebAssets.Manifest.cache
@@ -33,3 +31,6 @@ C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\staticwebassets\GunterBot.StaticW
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.dll
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.pdb
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.genruntimeconfig.cache
+C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.csproj.CoreCompileInputs.cache
+C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.MvcApplicationPartsAssemblyInfo.cache
+C:\MyProject\GunterBot\bin\Debug\netcoreapp3.1\RestSharp.dll
