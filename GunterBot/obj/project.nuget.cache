@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q4CTAa24K6xh/1PGWKcNl+Oki21qCR9JfLZMAHSjWGmPAZfeOFRxBpYwfoyPyXTPztZsAMIS5FEbkSiRE/EyBw==",
+  "dgSpecHash": "6Y50WOXeIPdlU0f5XnyRppa1qC5dCt373a17VomHC7AsNxRjQv7a7a9dgMkQtPD5ETfGCp2g2I2a/wVvP5uugA==",
   "success": true,
   "projectFilePath": "C:\\MyProject\\GunterBot\\GunterBot.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\BlackBox\\.nuget\\packages\\mongodb.bson\\2.11.3\\mongodb.bson.2.11.3.nupkg.sha512",
     "C:\\Users\\BlackBox\\.nuget\\packages\\mongodb.driver\\2.11.3\\mongodb.driver.2.11.3.nupkg.sha512",
     "C:\\Users\\BlackBox\\.nuget\\packages\\mongodb.driver.core\\2.11.3\\mongodb.driver.core.2.11.3.nupkg.sha512",
+    "C:\\Users\\BlackBox\\.nuget\\packages\\mongodb.driver.gridfs\\2.11.3\\mongodb.driver.gridfs.2.11.3.nupkg.sha512",
     "C:\\Users\\BlackBox\\.nuget\\packages\\mongodb.libmongocrypt\\1.0.0\\mongodb.libmongocrypt.1.0.0.nupkg.sha512",
     "C:\\Users\\BlackBox\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\BlackBox\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",

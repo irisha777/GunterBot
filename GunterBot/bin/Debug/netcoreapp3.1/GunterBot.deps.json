@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.9",
           "MongoDB.Driver": "2.11.3",
+          "MongoDB.Driver.GridFS": "2.11.3",
           "RestSharp": "106.11.7",
           "Telegram.Bot": "15.7.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -430,6 +431,22 @@
         },
         "compile": {
           "lib/netstandard2.0/MongoDB.Driver.Core.dll": {}
+        }
+      },
+      "MongoDB.Driver.GridFS/2.11.3": {
+        "dependencies": {
+          "MongoDB.Bson": "2.11.3",
+          "MongoDB.Driver": "2.11.3",
+          "MongoDB.Driver.Core": "2.11.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MongoDB.Driver.GridFS.dll": {
+            "assemblyVersion": "2.11.3.0",
+            "fileVersion": "2.11.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MongoDB.Driver.GridFS.dll": {}
         }
       },
       "MongoDB.Libmongocrypt/1.0.0": {
@@ -2962,6 +2979,13 @@
       "sha512": "sha512-BKX6HlO2RuNO3lX4jjwdHChmjisgjm9BsSPAiUXTEG6SSithL1IxuM+xqVRG8e/w7Z6YWZdU2ruTUZM4BVyN3A==",
       "path": "mongodb.driver.core/2.11.3",
       "hashPath": "mongodb.driver.core.2.11.3.nupkg.sha512"
+    },
+    "MongoDB.Driver.GridFS/2.11.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vAxfa2eXRz9ZmT3RM/kft1I5mVc/KW2C5FlnL1JR4nXrO4zqNolCTVG5mtbU+zqbjXt0+Fu3zVZhkn5IZjnG5Q==",
+      "path": "mongodb.driver.gridfs/2.11.3",
+      "hashPath": "mongodb.driver.gridfs.2.11.3.nupkg.sha512"
     },
     "MongoDB.Libmongocrypt/1.0.0": {
       "type": "package",

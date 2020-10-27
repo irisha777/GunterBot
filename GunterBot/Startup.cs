@@ -1,8 +1,10 @@
+using GunterBot.MongoDb.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using ShitBot.Models;
 
 namespace ShitBot
@@ -19,6 +21,12 @@ namespace ShitBot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<RateDBSettings>(
+                Configuration.GetSection(nameof(RateDBSettings)));
+
+            services.AddSingleton(sp =>
+                sp.GetRequiredService<IOptions<RateDBSettings>>().Value);
+
             services.AddControllers()
                 .AddNewtonsoftJson();
         }

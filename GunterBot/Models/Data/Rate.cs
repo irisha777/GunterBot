@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GunterBot.Tools.Data
+namespace GunterBot.Models.Data
 {
     public class Rate
     {

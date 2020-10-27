@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using GunterBot.Models;
 using GunterBot.Models.Commands;
 using Telegram.Bot;
 

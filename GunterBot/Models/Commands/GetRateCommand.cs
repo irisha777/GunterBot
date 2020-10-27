@@ -13,7 +13,7 @@ namespace GunterBot.Models.Commands
         {
             var chatId = message.Chat.Id;
 
-            var rate = await RatesReceiver.GetRates();
+            var rate = await RateReceiver.GetRates();
 
             await botClient.SendTextMessageAsync(chatId, $"Rate: {rate}",
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
