@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using GunterBot.Models;
+using GunterBot;
 using GunterBot.Models.Commands;
 using Telegram.Bot;
 
@@ -22,8 +22,7 @@ namespace ShitBot.Models
 
             _commandsList = new List<Command>
             {
-                new StartCommand(),
-                new GetRateCommand()
+                new StartCommand()
             };
 
             _botClient = new TelegramBotClient(AppSettings.Key);

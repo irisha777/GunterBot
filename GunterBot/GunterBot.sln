@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GunterBot", "GunterBot.csproj", "{98462480-4D54-4CC3-A99C-8657038409A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstApi", "..\InstApi\InstApi.csproj", "{41E182C1-690F-4D4C-A85A-33CE462ADF71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbBot", "..\DbBot\DbBot.csproj", "{B999B85D-E7DD-48C8-8A7F-A964061C7391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{98462480-4D54-4CC3-A99C-8657038409A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98462480-4D54-4CC3-A99C-8657038409A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98462480-4D54-4CC3-A99C-8657038409A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E182C1-690F-4D4C-A85A-33CE462ADF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E182C1-690F-4D4C-A85A-33CE462ADF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E182C1-690F-4D4C-A85A-33CE462ADF71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E182C1-690F-4D4C-A85A-33CE462ADF71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B999B85D-E7DD-48C8-8A7F-A964061C7391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B999B85D-E7DD-48C8-8A7F-A964061C7391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B999B85D-E7DD-48C8-8A7F-A964061C7391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B999B85D-E7DD-48C8-8A7F-A964061C7391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

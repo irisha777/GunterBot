@@ -1,0 +1,3 @@
+C:\MyProject\InstaAPI\obj\Debug\netcoreapp3.1\InstaAPI.AssemblyInfoInputs.cache
+C:\MyProject\InstaAPI\obj\Debug\netcoreapp3.1\InstaAPI.AssemblyInfo.cs
+C:\MyProject\InstaAPI\obj\Debug\netcoreapp3.1\InstaAPI.csproj.CoreCompileInputs.cache

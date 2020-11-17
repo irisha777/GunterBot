@@ -33,5 +33,3 @@ C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.pdb
 C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.genruntimeconfig.cache
 C:\MyProject\GunterBot\bin\Debug\netcoreapp3.1\RestSharp.dll
 C:\MyProject\GunterBot\bin\Debug\netcoreapp3.1\MongoDB.Driver.GridFS.dll
-C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.csproj.CoreCompileInputs.cache
-C:\MyProject\GunterBot\obj\Debug\netcoreapp3.1\GunterBot.MvcApplicationPartsAssemblyInfo.cache
