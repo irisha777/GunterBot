@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Telegram.Bot.Types;
 using ShitBot.Models;
 
-namespace ShitBot.Controllers
+namespace GunterBot.Controllers
 {
     [Route("api")]
     [ApiController]

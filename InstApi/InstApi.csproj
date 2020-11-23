@@ -5,5 +5,9 @@
     <StartupObject>InstApi.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="InstagramApiSharp" Version="1.5.0.1" />
+  </ItemGroup>
+
 
 </Project>

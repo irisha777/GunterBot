@@ -30,6 +30,10 @@ namespace ShitBot
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                // methods defining how an app will react on HTTP-requests
+            }
 
             //app.UseHttpsRedirection();
 

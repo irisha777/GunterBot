@@ -1,3 +1,4 @@
+using InstApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace InstApi
@@ -35,8 +37,12 @@ namespace InstApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                // methods defining how an app will react on HTTP-requests
+            }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -46,6 +52,19 @@ namespace InstApi
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public void DirectMessage()
+        {
+            var rnd = new Random();
+            var instBot = new InstApiBot();
+            instBot.Login();
+
+            while (true)
+            {
+                Thread.Sleep(60000);
+                instBot.PullUserDirect();
+            }
         }
     }
 }
