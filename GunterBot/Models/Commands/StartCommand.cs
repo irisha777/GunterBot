@@ -8,11 +8,11 @@ namespace GunterBot.Models.Commands
     {
         public override string Name => @"/start";
 
-        public override async Task Execute(Message message, TelegramBotClient botClient)
+        public override async Task Execute(Update update, TelegramBotClient client)
         {
-            var chatId = message.Chat.Id;
-            await botClient.SendTextMessageAsync(chatId, "Hallo I'm ASP.NET Core Bot", 
-                parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown);
+            await client.SendTextMessageAsync(update.Message.Chat.Id, 
+                "Доброго времени суток! Я помогу Вам с выбором Вашего идеального аромата😊 Что Вас интересует?", 
+                parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: Keyboard.GetCommonReplyKeyBoard());
         }
     }
 }

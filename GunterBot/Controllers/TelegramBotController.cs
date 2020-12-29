@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using GunterBot.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Telegram.Bot.Types;
-using ShitBot.Models;
 
 namespace GunterBot.Controllers
 {
@@ -13,17 +12,7 @@ namespace GunterBot.Controllers
         [HttpPost("update")]
         public async Task<IActionResult> MakeUpdate(Update update)
         {
-            var commands = Bot.Commands;
-            var message = update.Message;
-            var botClient = await Bot.GetBotClientAsync();
-
-            foreach (var command in commands)
-            {
-                if (!command.Contains(message)) continue;
-                await command.Execute(message, botClient);
-                break;
-            }
-
+            await UpdateHandler.Handle(update);
             return Ok();
         }
     }

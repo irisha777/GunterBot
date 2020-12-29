@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using GunterBot;
 using GunterBot.Models.Commands;
 using Telegram.Bot;
 
-namespace ShitBot.Models
+namespace GunterBot.Models
 {
     public class Bot
     {
         private static TelegramBotClient _botClient;
         private static List<Command> _commandsList;
+        private static List<Command> _callbackCommandsList;
 
         public static IReadOnlyList<Command> Commands => _commandsList.AsReadOnly();
+        public static IReadOnlyList<Command> CallbackCommands => _callbackCommandsList.AsReadOnly();
 
         public static async Task<TelegramBotClient> GetBotClientAsync()
         {
@@ -22,12 +23,20 @@ namespace ShitBot.Models
 
             _commandsList = new List<Command>
             {
-                new StartCommand()
+                new StartCommand(),
+                new AboutCommand(),
+                new CatalogCommand()
+            };
+
+            _callbackCommandsList = new List<Command>
+            {
+                new ProductCommand(),
             };
 
             _botClient = new TelegramBotClient(AppSettings.Key);
             var hook = string.Concat(AppSettings.Url, "/api/update");
             await _botClient.SetWebhookAsync(hook);
+
             return _botClient;
         }
     }
