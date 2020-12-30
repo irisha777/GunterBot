@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SalesDb.Models;
 using SalesDbContext = SalesDb.Models.SalesDbContext;
 
 namespace GunterBot.Db
@@ -26,6 +27,13 @@ namespace GunterBot.Db
                 .ToListAsync();
 
             return activeProd.ToDictionary(prod => prod.Id, prod => prod.Name);
+        }
+
+        public static async Task<Product> GetProductByIdAsync(SalesDbContext salesDbContext, int id)
+        {
+            return await salesDbContext.Products
+                .Where(p => p.Id == id)
+                .FirstOrDefaultAsync();
         }
     }
 }

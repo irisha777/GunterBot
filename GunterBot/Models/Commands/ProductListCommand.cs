@@ -9,7 +9,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace GunterBot.Models.Commands
 {
-    public class ProductCommand : Command
+    public class ProductListCommand : Command
     {
         public override string Name => ((int)EntityTypeEnum.ProductCategory).ToString();
 
@@ -19,11 +19,7 @@ namespace GunterBot.Models.Commands
 
             var actualProductNameDict =
                 await DbHelper.GetActualProductNameDictionaryByCategoryIdAsync(salesDbContext, 
-                    int.Parse(GetProductId(update.CallbackQuery.Data)));
-
-            //var inlineButtonArr =
-            //    Keyboard.GetTwoColumnInlineCatalogWithCallbackData(actualProductNameDict,
-            //        EntityTypeEnum.Product);
+                    int.Parse(GetItemtId(update.CallbackQuery.Data)));
 
             var inlineButtonArr =
                 Keyboard.GetTwoColumnInlineCatalogWithCallbackDataAndBackButton(actualProductNameDict,
@@ -33,11 +29,6 @@ namespace GunterBot.Models.Commands
                 "🌈 Пожалуйста, выберите интересующую Вас категорию 🌈",
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown,
                 replyMarkup: new InlineKeyboardMarkup(inlineButtonArr));
-        }
-
-        private static string GetProductId(string data)
-        {
-            return data.Substring(data.IndexOf("_", StringComparison.Ordinal) + 1);
         }
     }
 }

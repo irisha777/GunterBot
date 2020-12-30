@@ -130,5 +130,14 @@ namespace GunterBot.Models
 
             return keyboardInline;
         }
+
+        public static InlineKeyboardButton[] GetInlineKeyboardWithProductDescriptionAndCallbackData(SalesDb.Models.Product product)
+        {
+            return new[]
+            {
+                InlineKeyboardButton.WithCallbackData("Назад", "back"),
+                InlineKeyboardButton.WithCallbackData("Заказать", "order")
+            };
+        }
     }
 }

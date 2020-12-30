@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using GunterBot.Models.Commands;
 using Telegram.Bot;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace GunterBot.Models
 {
@@ -13,7 +14,6 @@ namespace GunterBot.Models
 
         public static IReadOnlyList<Command> Commands => _commandsList.AsReadOnly();
         public static IReadOnlyList<Command> CallbackCommands => _callbackCommandsList.AsReadOnly();
-
         public static async Task<TelegramBotClient> GetBotClientAsync()
         {
             if (_botClient != null)
@@ -30,7 +30,8 @@ namespace GunterBot.Models
 
             _callbackCommandsList = new List<Command>
             {
-                new ProductCommand(),
+                new ProductListCommand(),
+                new ProductDescriptionCommand()
             };
 
             _botClient = new TelegramBotClient(AppSettings.Key);
