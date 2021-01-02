@@ -11,9 +11,9 @@ namespace GunterBot.Handlers
     {
         public static async Task Handle(Update update)
         {
-            var commands = Bot.Commands;
-            var callbackCommands = Bot.CallbackCommands;
-            var botClient = await Bot.GetBotClientAsync();
+            var commands = BotHandler.Commands;
+            var callbackCommands = BotHandler.CallbackCommands;
+            var botClient = await BotHandler.GetBotClientAsync();
 
             switch (update.Type)
             {
@@ -37,7 +37,7 @@ namespace GunterBot.Handlers
                     throw new Exception("This Update.Type is not supported");
             }
         }
-
+        
         private static string GetEntityType(string data)
         {
             return data.Substring(0, data.IndexOf("_", StringComparison.Ordinal));

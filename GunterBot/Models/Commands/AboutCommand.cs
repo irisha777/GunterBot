@@ -11,7 +11,7 @@ namespace GunterBot.Models.Commands
         {
             await client.SendTextMessageAsync(update.Message.Chat.Id,
                 "✨АРОМА КОМПОЗИЦИИ НА ОСНОВЕ ЭФИРНЫХ МАСЕЛ✨ ▫️ритуальные бленды для медитаций▫️терапевтические миксы  ▫️100 % натуральные компоненты   ▫️vegan продукт", 
-                parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: Keyboard.GetCommonReplyKeyBoard());
+                parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown, replyMarkup: KeyboardHandler.GetCommonReplyKeyBoard());
         }
     }
 }

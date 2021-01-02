@@ -46,7 +46,7 @@ namespace ShitBot
                 endpoints.MapControllers();
             });
 
-            Bot.GetBotClientAsync().Wait();
+            BotHandler.GetBotClientAsync().Wait();
         }
     }
 }

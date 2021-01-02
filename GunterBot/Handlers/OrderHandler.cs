@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GunterBot.Models
+namespace GunterBot.Handlers
 {
-    public class Catalog
+    public class OrderHandler
     {
+
     }
 }

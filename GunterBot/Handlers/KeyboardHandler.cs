@@ -7,7 +7,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace GunterBot.Models
 {
-    public static class Keyboard
+    public static class KeyboardHandler
     {
         public static IReplyMarkup GetCommonReplyKeyBoard()
         {
@@ -64,7 +64,8 @@ namespace GunterBot.Models
             return keyboardInline;
         }
 
-        public static InlineKeyboardButton[][] GetTwoColumnInlineCatalogWithCallbackData(Dictionary<int, string> dict, EntityTypeEnum entityType)
+        public static InlineKeyboardButton[][] GetTwoColumnInlineCatalogWithCallbackData(Dictionary<int, string> dict, 
+            EntityTypeEnum entityType)
         {
 
             if (dict.Count < 1)
@@ -97,7 +98,8 @@ namespace GunterBot.Models
             return keyboardInline;
         }
 
-        public static InlineKeyboardButton[][] GetTwoColumnInlineCatalogWithCallbackDataAndBackButton(Dictionary<int, string> dict, EntityTypeEnum entityType)
+        public static InlineKeyboardButton[][] GetTwoColumnInlineCatalogWithCallbackDataAndBackButton(Dictionary<int, string> dict, 
+            EntityTypeEnum entityType)
         {
             var twoColumnKeyboard = GetTwoColumnInlineCatalogWithCallbackData(dict, entityType);
 
@@ -129,15 +131,6 @@ namespace GunterBot.Models
             }
 
             return keyboardInline;
-        }
-
-        public static InlineKeyboardButton[] GetInlineKeyboardWithProductDescriptionAndCallbackData(SalesDb.Models.Product product)
-        {
-            return new[]
-            {
-                InlineKeyboardButton.WithCallbackData("Назад", "back"),
-                InlineKeyboardButton.WithCallbackData("Заказать", "order")
-            };
         }
     }
 }

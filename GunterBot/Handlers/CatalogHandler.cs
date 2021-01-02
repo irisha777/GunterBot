@@ -3,11 +3,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesDb.Models;
-using SalesDbContext = SalesDb.Models.SalesDbContext;
 
-namespace GunterBot.Db
+namespace GunterBot.Handlers
 {
-    public static class DbHelper
+    public class CatalogHandler
     {
         public static async Task<Dictionary<int, string>> GetActualProductCategoryDictionaryAsync(SalesDbContext salesDbContext)
         {

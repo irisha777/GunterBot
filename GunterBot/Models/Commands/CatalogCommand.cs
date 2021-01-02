@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using GunterBot.Db;
+using GunterBot.Handlers;
 using GunterBot.Models.Enum;
 using SalesDb.Models;
 using Telegram.Bot;
@@ -17,10 +17,10 @@ namespace GunterBot.Models.Commands
             var salesDbContext = new SalesDbContext();
 
             var activeProductCategoryNameDict = 
-                await DbHelper.GetActualProductCategoryDictionaryAsync(salesDbContext);
+                await CatalogHandler.GetActualProductCategoryDictionaryAsync(salesDbContext);
 
             var inlineButtonArr =
-                Keyboard.GetOneColumnInlineKeyboardWithCallbackData(activeProductCategoryNameDict,
+                KeyboardHandler.GetOneColumnInlineKeyboardWithCallbackData(activeProductCategoryNameDict,
                     EntityTypeEnum.ProductCategory);
 
             await client.SendTextMessageAsync(update.Message.Chat.Id,

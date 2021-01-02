@@ -6,7 +6,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace GunterBot.Models
 {
-    public class Bot
+    public class BotHandler
     {
         private static TelegramBotClient _botClient;
         private static List<Command> _commandsList;

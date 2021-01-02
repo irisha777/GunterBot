@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using GunterBot.Db;
+using GunterBot.Handlers;
 using GunterBot.Models.Enum;
 using SalesDb.Models;
 using Telegram.Bot;
@@ -16,16 +16,16 @@ namespace GunterBot.Models.Commands
             var salesDbContext = new SalesDbContext();
 
             var product =
-                await DbHelper.GetProductByIdAsync(salesDbContext,
+                await CatalogHandler.GetProductByIdAsync(salesDbContext,
                     int.Parse(GetItemtId(update.CallbackQuery.Data)));
-
-            var inlineButtonArr =
-                Keyboard.GetInlineKeyboardWithProductDescriptionAndCallbackData(product);
 
             await client.SendTextMessageAsync(update.CallbackQuery.Message.Chat.Id,
                 $"{product.Name}  {product.Descrition} {product.Cost}",
                 parseMode: Telegram.Bot.Types.Enums.ParseMode.Markdown,
-                replyMarkup: new InlineKeyboardMarkup(inlineButtonArr));
+                replyMarkup: new InlineKeyboardMarkup(new[]
+                {
+                    InlineKeyboardButton.WithCallbackData("Заказать", "order")
+                }));
         }
     }
 }
